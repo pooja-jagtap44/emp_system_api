@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="4af720da-77bb-4b63-bd83-23e857c6852b" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="emp_system_api_gitFlow" doc:id="e3296633-af94-4cdb-af19-065f4930452c" >
+		<http:listener doc:name="Listener" doc:id="c61219bb-2d34-4e3d-aed2-188e3bd9b0d3" config-ref="HTTP_Listener_config" path="/employee"/>
+		<set-payload value="Employee Details" doc:name="Set Payload" doc:id="ea78adb8-cf79-4d39-9107-310a7c528c87" />
+	</flow>
+</mule>

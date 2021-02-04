@@ -10,5 +10,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<flow name="emp_system_api_gitFlow" doc:id="e3296633-af94-4cdb-af19-065f4930452c" >
 		<http:listener doc:name="Listener" doc:id="c61219bb-2d34-4e3d-aed2-188e3bd9b0d3" config-ref="HTTP_Listener_config" path="/employee"/>
 		<set-payload value="All Employee Details" doc:name="Set Payload" doc:id="ea78adb8-cf79-4d39-9107-310a7c528c87" />
+		<logger level="INFO" doc:name="Logger" doc:id="b136ce4e-f288-43ed-b0bf-43466792743a" message="payload"/>
 	</flow>
 </mule>
